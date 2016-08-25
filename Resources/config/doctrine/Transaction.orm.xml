@@ -1,0 +1,27 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                   https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+    <mapped-superclass name="Xoptov\PaymentSystemBundle\Entity\Transaction" table="money_transaction">
+        <id name="id" type="integer">
+            <generator strategy="AUTO"/>
+            <options>
+                <option name="unsigned">true</option>
+            </options>
+        </id>
+        <field name="amount" type="float"/>
+        <field name="status" type="smallint">
+            <options>
+                <option name="unsigned">true</option>
+            </options>
+        </field>
+        <field name="createdAt" type="datetime"/>
+        <field name="updatedAt" type="datetime" nullable="true"/>
+        <many-to-one target-entity="Xoptov\PaymentSystemBundle\Model\AccountInterface" field="source">
+            <join-column name="source_id" referenced-column-name="id" nullable="true"/>
+        </many-to-one>
+        <many-to-one target-entity="Xoptov\PaymentSystemBundle\Model\AccountInterface" field="destination">
+            <join-column name="destination_id" referenced-column-name="id" nullable="true"/>
+        </many-to-one>
+    </mapped-superclass>
+</doctrine-mapping>
