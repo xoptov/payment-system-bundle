@@ -44,7 +44,7 @@ abstract class PaymentSystem implements PaymentSystemInterface
      */
     public function setUrl($url)
     {
-        $this->$url = $url;
+        $this->url = $url;
 
         return $this;
     }

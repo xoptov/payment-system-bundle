@@ -10,9 +10,6 @@ abstract class Credential
     /** @var AccountInterface */
     protected $account;
 
-    /** @var PaymentSystemInterface */
-    protected $paymentSystem;
-
     /** @var string */
     protected $login;
 
@@ -47,25 +44,6 @@ abstract class Credential
     public function getAccount()
     {
         return $this->account;
-    }
-
-    /**
-     * @param PaymentSystemInterface $paymentSystem
-     * @return Credential
-     */
-    public function setPaymentSystem(PaymentSystemInterface $paymentSystem)
-    {
-        $this->paymentSystem = $paymentSystem;
-
-        return $this;
-    }
-
-    /**
-     * @return PaymentSystemInterface
-     */
-    public function getPaymentSystem()
-    {
-        return $this->paymentSystem;
     }
 
     /**

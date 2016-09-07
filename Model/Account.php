@@ -13,9 +13,6 @@ abstract class Account implements AccountInterface
     /** @var float */
     protected $balance;
 
-    /** @var int */
-    protected $status;
-
     /** @var \DateTime */
     protected $createdAt;
 
@@ -64,24 +61,6 @@ abstract class Account implements AccountInterface
     public function getBalance()
     {
         return $this->balance;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setStatus($status)
-    {
-        $this->status = $status;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getStatus()
-    {
-        return $this->status;
     }
 
     /**

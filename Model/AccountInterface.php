@@ -32,17 +32,6 @@ interface AccountInterface
     public function getBalance();
 
     /**
-     * @param $status
-     * @return AccountInterface
-     */
-    public function setStatus($status);
-
-    /**
-     * @return int
-     */
-    public function getStatus();
-
-    /**
      * @return \DateTime
      */
     public function getCreatedAt();
