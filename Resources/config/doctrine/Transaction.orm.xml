@@ -18,10 +18,10 @@
         <field name="createdAt" type="datetime"/>
         <field name="updatedAt" type="datetime" nullable="true"/>
         <many-to-one target-entity="Xoptov\PaymentSystemBundle\Model\AccountInterface" field="source">
-            <join-column name="source_id" referenced-column-name="id" nullable="true"/>
+            <join-column name="source_id" referenced-column-name="id" nullable="false"/>
         </many-to-one>
         <many-to-one target-entity="Xoptov\PaymentSystemBundle\Model\AccountInterface" field="destination">
-            <join-column name="destination_id" referenced-column-name="id" nullable="true"/>
+            <join-column name="destination_id" referenced-column-name="id" nullable="false"/>
         </many-to-one>
     </mapped-superclass>
 </doctrine-mapping>
