@@ -11,7 +11,7 @@ abstract class Account implements AccountInterface
     protected $owner;
 
     /** @var float */
-    protected $balance;
+    protected $balance = 0.0;
 
     /** @var \DateTime */
     protected $createdAt;
