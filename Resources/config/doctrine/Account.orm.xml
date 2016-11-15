@@ -13,7 +13,7 @@
         <field name="createdAt" type="datetime" column="created_at"/>
         <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
         <many-to-one target-entity="Xoptov\PaymentSystemBundle\Model\OwnerInterface" field="owner">
-            <join-column name="owner_id" referenced-column-name="id"/>
+            <join-column name="owner_id" referenced-column-name="id" on-delete="CASCADE"/>
         </many-to-one>
     </mapped-superclass>
 </doctrine-mapping>
